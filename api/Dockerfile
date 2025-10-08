@@ -22,6 +22,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install --no-install-recommends -y \
 	acl \
 	file \
+	openssl \
 	gettext \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
@@ -36,6 +37,7 @@ RUN set -eux; \
 		@composer \
 		apcu \
 		intl \
+		sockets \
 		opcache \
 		zip \
 	;
